@@ -55,9 +55,9 @@ describe('Gilded Rose', function () {
     // Backstage passes, like aged brie, increases in Quality as its SellIn value approaches;
     // Quality increases by 2 when there are 10 days or less by 3 when there are 5 days or less
     it('Backstage passes increase in quality as its sellIn value approaches (sellIn = 10 days or less)', function() {
-        const gildedRose = new GildedRose([ new Item('Backstage passes to a TAFKAL80ETC concert', 6, 10) ]);
+        const gildedRose = new GildedRose([ new Item('Backstage passes to a TAFKAL80ETC concert', 7, 11) ]);
         const items = gildedRose.updateQuality();
-        expect(items[0].quality).to.equal(12);
+        expect(items[0].quality).to.equal(13);
     });
 
     it('Backstage passes increase in quality as its sellIn value approaches (sellIn = 5 days or less)', function() {
