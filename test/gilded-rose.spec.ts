@@ -97,4 +97,22 @@ describe('Gilded Rose', function () {
             expect(items[0].quality).to.equal(0);
         })
     })
+
+    describe('with Conjured item', () => {
+        let gildedRose: GildedRose;
+        beforeEach(() => {
+            gildedRose = new GildedRose([new Item('Conjured', 5, 10)]);
+        });
+
+        it('should decrease quality at a rate that is twice as fast as a normal item', () => {
+            const items = gildedRose.updateQuality();
+            expect(items[0].quality).to.equal(8);
+        })
+
+        it('should decrease quality at a rate that is twice as fast as a normal item after the sell in data has passed', () => {
+            gildedRose.items[0].sellIn = 0;
+            const items = gildedRose.updateQuality();
+            expect(items[0].quality).to.equal(6);
+        })
+    })
 });
