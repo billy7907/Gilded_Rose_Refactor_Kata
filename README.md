@@ -1,5 +1,7 @@
 # Gilded Rose Refactoring Kata (TypeScript submission by Billy Hung)
 
+GitHub Repot: https://github.com/billy7907/Gilded_Rose_Refactor_Kata
+
 This README.md contains the step by step of my thought process as I work through the refactoring within the 2 hours time window.
 
 ## Step 1 - Initialization
